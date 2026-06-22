@@ -1,5 +1,5 @@
 /* ============================================
-   PALMPAY AGGREGATOR TOWN HALL TRAINING GUIDE
+   PALMPAY AGG NEW POLICY TRAINING
    Certificate Generator
    ============================================ */
 
@@ -79,7 +79,7 @@ const Certificate = {
     // Course name
     ctx.fillStyle = '#0F172A';
     ctx.font = 'bold 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-    ctx.fillText('Aggregator Town Hall Training Guide', 400, 320);
+    ctx.fillText('Aggregator New Policy Training', 400, 320);
 
     // Details
     ctx.fillStyle = '#64748B';

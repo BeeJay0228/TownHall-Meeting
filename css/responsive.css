@@ -6,6 +6,15 @@
 /* --- SMALL PHONES (up to 360px) --- */
 @media (max-width: 360px) {
   .splash-title { font-size: 20px; }
+  .opportunity-card { flex-direction: column; text-align: center; padding: 14px; }
+  .opportunity-icon { font-size: 28px; }
+  .policy-benefits-list li { font-size: 12px; }
+  .pos-accordion-header { padding: 12px 14px; }
+  .pos-accordion-header h3 { font-size: 13px; }
+  .rule-card { padding: 14px; }
+  .practice-card-header { padding: 12px 14px; }
+  .practice-card-body ul li { font-size: 12px; }
+  .module-intro-note { font-size: 12px; padding: 8px 12px; }
   .stats-grid { gap: 8px; }
   .stat-card { padding: 12px; gap: 10px; }
   .stat-icon { width: 36px; height: 36px; }
@@ -56,6 +65,8 @@
   .formula-cards { grid-template-columns: 1fr 1fr 1fr; }
   .pos-cards { grid-template-columns: 1fr 1fr; }
   .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  .rules-grid { grid-template-columns: 1fr 1fr; }
+  .practices-grid { grid-template-columns: 1fr 1fr; }
   .kpi-grid { grid-template-columns: 1fr 1fr 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .commission-cards { grid-template-columns: 1fr 1fr; }
@@ -208,6 +219,17 @@
 
 [data-theme="dark"] .mock-card {
   border-color: var(--border);
+}
+
+[data-theme="dark"] .opportunity-card {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.15), rgba(22, 163, 74, 0.08));
+  border-color: rgba(22, 163, 74, 0.3);
+}
+[data-theme="dark"] .opportunity-text {
+  color: #86EFAC;
+}
+[data-theme="dark"] .policy-benefits-list li::before {
+  color: #4ADE80;
 }
 
 /* --- ACCESSIBILITY: FOCUS VISIBLE --- */

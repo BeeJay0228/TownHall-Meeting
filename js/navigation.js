@@ -135,6 +135,20 @@ const Nav = {
 
     main.addEventListener('touchstart', (e) => {
       this.touchStartX = e.changedTouches[0].screenX;
+      this.touchStartY = e.changedTouches[0].screenY;
+      this.scrollContainer = this.findScrollableParent(e.target);
+      this.scrollStartLeft = this.scrollContainer ? this.scrollContainer.scrollLeft : 0;
+    }, { passive: true });
+
+    main.addEventListener('touchmove', (e) => {
+      if (!this.touchStartX) return;
+      const moveX = e.changedTouches[0].screenX;
+      const moveY = e.changedTouches[0].screenY;
+      const dx = Math.abs(moveX - this.touchStartX);
+      const dy = Math.abs(moveY - this.touchStartY);
+      if (dy > dx) {
+        this.isVerticalScroll = true;
+      }
     }, { passive: true });
 
     main.addEventListener('touchend', (e) => {
@@ -143,9 +157,32 @@ const Nav = {
     }, { passive: true });
   },
 
+  findScrollableParent(el) {
+    let current = el;
+    while (current && current !== document.body) {
+      const style = window.getComputedStyle(current);
+      const ox = style.overflowX;
+      if ((ox === 'auto' || ox === 'scroll') && current.scrollWidth > current.clientWidth) {
+        return current;
+      }
+      current = current.parentElement;
+    }
+    return null;
+  },
+
   handleSwipe() {
     const threshold = 80;
     const diff = this.touchStartX - this.touchEndX;
+
+    if (this.isVerticalScroll) {
+      this.isVerticalScroll = false;
+      return;
+    }
+
+    if (this.scrollContainer && this.scrollContainer.scrollLeft !== this.scrollStartLeft) {
+      this.scrollContainer = null;
+      return;
+    }
 
     if (Math.abs(diff) > threshold) {
       const sections = App.state.modules;
@@ -153,10 +190,8 @@ const Nav = {
       if (currentIndex === -1) return;
 
       if (diff > 0 && currentIndex < sections.length - 1) {
-        // Swipe left - next
         this.navigateTo(sections[currentIndex + 1].id);
       } else if (diff < 0 && currentIndex > 0) {
-        // Swipe right - previous
         this.navigateTo(sections[currentIndex - 1].id);
       }
     }

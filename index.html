@@ -1726,6 +1726,28 @@
         </div>
       </section>
 
+      <!-- CERTIFICATE MODAL -->
+      <div id="certificate-modal" class="cert-modal" aria-hidden="true">
+        <div class="cert-modal-backdrop"></div>
+        <div class="cert-modal-card" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+          <div class="cert-modal-header">
+            <div class="cert-modal-icon">🎓</div>
+            <h3 id="cert-modal-title" class="cert-modal-title">Certificate Information</h3>
+          </div>
+          <div class="cert-modal-body">
+            <p class="cert-modal-text">Please enter your full name as you would like it to appear on your certificate.</p>
+            <div class="cert-modal-field">
+              <input type="text" id="cert-name" class="cert-input" placeholder="Enter Aggregator Name" maxlength="100" autocomplete="name">
+              <span id="cert-name-error" class="cert-error" role="alert"></span>
+            </div>
+          </div>
+          <div class="cert-modal-actions">
+            <button id="cert-cancel" class="btn-outline">Cancel</button>
+            <button id="cert-generate" class="btn-primary">Generate Certificate</button>
+          </div>
+        </div>
+      </div>
+
     </main>
 
     <!-- BACK TO TOP BUTTON -->

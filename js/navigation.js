@@ -75,18 +75,17 @@ const Nav = {
         const target = link.getAttribute('href').slice(1);
         this.navigateTo(target);
 
-        // Close nav
-        const nav = document.getElementById('side-nav');
-        const overlay = document.getElementById('nav-overlay');
-        const toggle = document.getElementById('menu-toggle');
-        nav.classList.remove('open');
-        const isDesktop = window.innerWidth >= 769;
-        if (!isDesktop) {
+        // Close nav only on mobile
+        if (window.innerWidth < 769) {
+          const nav = document.getElementById('side-nav');
+          const overlay = document.getElementById('nav-overlay');
+          const toggle = document.getElementById('menu-toggle');
+          nav.classList.remove('open');
           overlay.classList.remove('open');
           document.body.style.overflow = '';
+          toggle.setAttribute('aria-expanded', 'false');
+          localStorage.setItem('sidebarOpen', 'false');
         }
-        toggle.setAttribute('aria-expanded', 'false');
-        localStorage.setItem('sidebarOpen', 'false');
       });
     });
   },

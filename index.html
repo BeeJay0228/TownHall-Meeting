@@ -501,8 +501,12 @@
             <!-- MONTHLY EARNING COMPARISON -->
             <div class="roi-section">
               <h3 class="roi-section-title">Monthly AGG Earnings Comparison</h3>
-              <div class="comp-grid">
-                <div class="comp-card palmpay-card">
+              <div class="comp-tabs">
+                <button class="comp-tab active" data-comp="palmpay">PalmPay New Policy</button>
+                <button class="comp-tab" data-comp="mmo">Other MMOs</button>
+              </div>
+              <div class="comp-slider">
+                <div class="comp-card palmpay-card comp-panel active" data-comp-panel="palmpay">
                   <div class="comp-card-header">
                     <span class="comp-badge">A</span>
                     <h4>PalmPay New Policy</h4>
@@ -552,7 +556,7 @@
                     <span class="comp-total-value" data-target="22746">₦0</span>
                   </div>
                 </div>
-                <div class="comp-card mmo-card">
+                <div class="comp-card mmo-card comp-panel" data-comp-panel="mmo">
                   <div class="comp-card-header">
                     <span class="comp-badge secondary">B</span>
                     <h4>Other MMOs</h4>

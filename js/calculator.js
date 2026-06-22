@@ -38,6 +38,7 @@ const Calculator = {
     this.initCommissionCalc();
     this.initStarTabs();
     this.initAnimatedCounters();
+    this.initCompTabs();
   },
 
   /* --- MODULE 3 COMMISSION CALCULATOR --- */
@@ -105,6 +106,31 @@ const Calculator = {
     // Activate first panel counters
     const activePanel = document.querySelector('.star-panel.active');
     if (activePanel) this.animateCounterInPanel(activePanel);
+  },
+
+  /* --- COMPARISON TABS (Module 5) --- */
+  initCompTabs() {
+    const tabs = document.querySelectorAll('.comp-tab');
+    if (!tabs.length) return;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const target = tab.dataset.comp;
+        document.querySelectorAll('.comp-panel').forEach(p => p.classList.remove('active'));
+        const panel = document.querySelector(`.comp-panel[data-comp-panel="${target}"]`);
+        if (panel) {
+          panel.classList.add('active');
+          // Re-trigger counter animation for the visible panel
+          const totalValue = panel.querySelector('.comp-total-value[data-target]');
+          if (totalValue) {
+            this.animateValue(totalValue, parseInt(totalValue.dataset.target));
+          }
+        }
+      });
+    });
   },
 
   animateCounterInPanel(panel) {

@@ -366,6 +366,75 @@
   .comp-grid {
     gap: 12px;
   }
+
+  /* --- Mobile: Global overflow safety --- */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .breakeven-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .breakeven-item.highlight-be {
+    grid-column: 1 / -1;
+  }
+
+  .benefits-highlight {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .commission-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-mock {
+    grid-template-columns: 1fr;
+  }
+
+  .star-tab {
+    min-width: 90px;
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .star-tabs {
+    gap: 4px;
+  }
+
+  .infographic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-section-title {
+    font-size: 15px;
+  }
+
+  .se-value {
+    font-size: 14px;
+  }
+
+  .se-count {
+    font-size: 9px;
+  }
+
+  .charge-formula {
+    font-size: 12px;
+  }
+
+  .charge-result {
+    font-size: 14px;
+  }
+
+  *, *::before, *::after {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  img, svg, canvas {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* --- TABLETS (601px - 1024px) --- */

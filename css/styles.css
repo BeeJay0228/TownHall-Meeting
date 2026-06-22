@@ -1425,6 +1425,54 @@ input, textarea { font-family: inherit; }
   color: #64748B;
 }
 
+/* --- COMPARISON TABS --- */
+.comp-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.comp-tab {
+  flex: 1;
+  padding: 10px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.comp-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.comp-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(106, 53, 255, 0.3);
+}
+
+.comp-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.comp-panel {
+  display: none;
+  animation: fadeIn 0.3s ease;
+  margin: 0;
+}
+
+.comp-panel.active {
+  display: block;
+}
+
 /* --- PROFIT ADVANTAGE --- */
 .profit-advantage {
   background: var(--bg-card);

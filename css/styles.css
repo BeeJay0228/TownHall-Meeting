@@ -482,6 +482,8 @@ input, textarea { font-family: inherit; }
   max-width: 800px;
   margin: 0 auto;
   padding: 24px 16px 40px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .module-header {
@@ -1159,11 +1161,12 @@ input, textarea { font-family: inherit; }
 .table-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--bg-card);
   box-shadow: var(--shadow);
+  padding-bottom: 2px;
 }
 
 .roi-table {

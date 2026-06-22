@@ -13,7 +13,6 @@ const Nav = {
     this.initModuleNav();
     this.initContinueLearning();
     this.initScrollSpy();
-    this.initSwipeNavigation();
     this.restoreLastSection();
   },
 
@@ -24,21 +23,35 @@ const Nav = {
     const overlay = document.getElementById('nav-overlay');
     const close = document.getElementById('nav-close');
 
+    const isDesktop = () => window.innerWidth >= 769;
+
     const openNav = () => {
       nav.classList.add('open');
-      overlay.classList.add('open');
       toggle.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
+      if (!isDesktop()) {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      localStorage.setItem('sidebarOpen', 'true');
     };
 
     const closeNav = () => {
       nav.classList.remove('open');
-      overlay.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      if (!isDesktop()) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+      localStorage.setItem('sidebarOpen', 'false');
     };
 
-    toggle.addEventListener('click', openNav);
+    toggle.addEventListener('click', () => {
+      if (nav.classList.contains('open')) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
     close.addEventListener('click', closeNav);
     overlay.addEventListener('click', closeNav);
 
@@ -47,6 +60,11 @@ const Nav = {
         closeNav();
       }
     });
+
+    // Restore sidebar state from localStorage
+    if (localStorage.getItem('sidebarOpen') === 'true') {
+      openNav();
+    }
   },
 
   /* --- NAVIGATION LINKS --- */
@@ -57,14 +75,18 @@ const Nav = {
         const target = link.getAttribute('href').slice(1);
         this.navigateTo(target);
 
-        // Close mobile nav
+        // Close nav
         const nav = document.getElementById('side-nav');
         const overlay = document.getElementById('nav-overlay');
         const toggle = document.getElementById('menu-toggle');
         nav.classList.remove('open');
-        overlay.classList.remove('open');
+        const isDesktop = window.innerWidth >= 769;
+        if (!isDesktop) {
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
         toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        localStorage.setItem('sidebarOpen', 'false');
       });
     });
   },
@@ -127,74 +149,6 @@ const Nav = {
         link.classList.add('active');
       }
     });
-  },
-
-  /* --- SWIPE NAVIGATION (Mobile) --- */
-  initSwipeNavigation() {
-    const main = document.getElementById('main-content');
-
-    main.addEventListener('touchstart', (e) => {
-      this.touchStartX = e.changedTouches[0].screenX;
-      this.touchStartY = e.changedTouches[0].screenY;
-      this.scrollContainer = this.findScrollableParent(e.target);
-      this.scrollStartLeft = this.scrollContainer ? this.scrollContainer.scrollLeft : 0;
-    }, { passive: true });
-
-    main.addEventListener('touchmove', (e) => {
-      if (!this.touchStartX) return;
-      const moveX = e.changedTouches[0].screenX;
-      const moveY = e.changedTouches[0].screenY;
-      const dx = Math.abs(moveX - this.touchStartX);
-      const dy = Math.abs(moveY - this.touchStartY);
-      if (dy > dx) {
-        this.isVerticalScroll = true;
-      }
-    }, { passive: true });
-
-    main.addEventListener('touchend', (e) => {
-      this.touchEndX = e.changedTouches[0].screenX;
-      this.handleSwipe();
-    }, { passive: true });
-  },
-
-  findScrollableParent(el) {
-    let current = el;
-    while (current && current !== document.body) {
-      const style = window.getComputedStyle(current);
-      const ox = style.overflowX;
-      if ((ox === 'auto' || ox === 'scroll') && current.scrollWidth > current.clientWidth) {
-        return current;
-      }
-      current = current.parentElement;
-    }
-    return null;
-  },
-
-  handleSwipe() {
-    const threshold = 80;
-    const diff = this.touchStartX - this.touchEndX;
-
-    if (this.isVerticalScroll) {
-      this.isVerticalScroll = false;
-      return;
-    }
-
-    if (this.scrollContainer && this.scrollContainer.scrollLeft !== this.scrollStartLeft) {
-      this.scrollContainer = null;
-      return;
-    }
-
-    if (Math.abs(diff) > threshold) {
-      const sections = App.state.modules;
-      const currentIndex = sections.findIndex(m => m.id === this.currentSection);
-      if (currentIndex === -1) return;
-
-      if (diff > 0 && currentIndex < sections.length - 1) {
-        this.navigateTo(sections[currentIndex + 1].id);
-      } else if (diff < 0 && currentIndex > 0) {
-        this.navigateTo(sections[currentIndex - 1].id);
-      }
-    }
   },
 
   /* --- NAVIGATE TO SECTION --- */

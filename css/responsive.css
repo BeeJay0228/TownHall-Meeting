@@ -11,9 +11,11 @@
   .stat-icon { width: 36px; height: 36px; }
   .stat-value { font-size: 15px; }
   .welcome-title { font-size: 22px; }
-  .roi-summary { grid-template-columns: 1fr; }
   .completion-stats { gap: 16px; }
   .completion-stat-value { font-size: 20px; }
+  .breakeven-grid { grid-template-columns: 1fr; }
+  .star-earnings-grid { grid-template-columns: 1fr; }
+  .profit-vs { flex-direction: column; }
 }
 
 /* --- PHONES (361px - 480px) --- */
@@ -36,6 +38,16 @@
   .results-actions .btn-primary,
   .results-actions .btn-outline { width: 100%; }
   .benefits-highlight { grid-template-columns: 1fr; }
+  .avg-charge-grid { grid-template-columns: 1fr; }
+  .avg-charge-item { flex-direction: column; text-align: center; }
+  .comp-grid { grid-template-columns: 1fr; }
+  .charge-label { min-width: auto; }
+  .star-earnings-grid { grid-template-columns: 1fr; }
+  .be-month { flex-wrap: wrap; }
+  .be-month-label { min-width: auto; }
+  .be-month-value { min-width: auto; }
+  .star-tab { font-size: 11px; padding: 8px 10px; min-width: 90px; }
+  .profit-vs-divider { width: 100%; text-align: center; }
 }
 
 /* --- TABLETS (481px - 768px) --- */
@@ -54,13 +66,18 @@
   .comparison-container { flex-direction: row; align-items: stretch; }
   .comparison-card { flex: 1; }
   .comparison-divider { display: flex; align-items: center; }
+  .comp-grid { grid-template-columns: 1fr; }
+  .avg-charge-grid { grid-template-columns: 1fr; }
+  .breakeven-grid { grid-template-columns: 1fr 1fr; }
+  .breakeven-item.highlight-be { grid-column: 1 / -1; }
+  .charge-label { min-width: 120px; }
 }
 
 /* --- TABLETS (up to 768px) --- */
 @media (max-width: 768px) {
   .side-nav { width: 100%; max-width: 320px; }
-  .roi-summary { grid-template-columns: 1fr 1fr; }
-  .roi-metric:last-child { grid-column: 1 / -1; }
+  .breakeven-grid { grid-template-columns: 1fr 1fr; }
+  .breakeven-item.highlight-be { grid-column: 1 / -1; }
 }
 
 /* --- TABLETS (601px - 1024px) --- */
@@ -107,13 +124,11 @@
     font-size: 32px;
   }
 
-  .roi-summary {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .roi-metric:last-child {
-    grid-column: auto;
-  }
+  .comp-grid { grid-template-columns: 1fr 1fr; }
+  .avg-charge-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .breakeven-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .breakeven-item.highlight-be { grid-column: auto; }
+  .star-earnings-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 /* --- LARGE DESKTOP (1025px+) --- */
@@ -137,6 +152,10 @@
 
   .stats-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .comp-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

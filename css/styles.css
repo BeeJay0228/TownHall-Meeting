@@ -1141,83 +1141,515 @@ input, textarea { font-family: inherit; }
   margin-right: 8px;
 }
 
-/* --- ROI (Module 5) --- */
-.roi-summary {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 24px;
+/* --- ROI (Module 5) Enhanced --- */
+.roi-section {
+  margin-bottom: 28px;
 }
 
-.roi-metric {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+.roi-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* --- CASE STUDY TABLE --- */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 4px;
   border-radius: var(--radius);
-  padding: 16px;
-  text-align: center;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
   box-shadow: var(--shadow);
 }
 
-.roi-metric.highlight {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-  border-color: transparent;
+.roi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 560px;
 }
 
-.roi-metric.highlight .roi-value,
-.roi-metric.highlight .roi-label {
+.roi-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.roi-table th {
+  background: var(--primary);
   color: white;
-}
-
-.roi-value {
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--text);
-  display: block;
-}
-
-.roi-label {
-  font-size: 10px;
-  color: var(--text-muted);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  font-weight: 600;
+  white-space: nowrap;
 }
 
-.chart-container {
+.roi-table th:first-child {
+  border-radius: 0;
+}
+
+.roi-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 500;
+}
+
+.roi-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.roi-table tbody tr:hover {
+  background: var(--primary-bg);
+}
+
+.roi-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.txn-icon {
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+/* --- AVERAGE CHARGE CARD --- */
+.avg-charge-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
-  margin-bottom: 16px;
   box-shadow: var(--shadow);
 }
 
-.chart-container h3 {
-  font-size: 15px;
+.avg-charge-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.avg-charge-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.avg-charge-header h3 {
+  font-size: 16px;
   font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.avg-charge-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.avg-charge-value-card {
+  background: var(--primary-bg);
+  border: 1px solid rgba(106, 53, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  text-align: center;
   margin-bottom: 16px;
 }
 
-.bar-chart {
+.avg-charge-big {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.avg-charge-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.avg-charge-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.avg-charge-item {
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.charge-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 140px;
+}
+
+.charge-formula {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+}
+
+.charge-result {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.charge-desc {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: block;
+  text-align: center;
+}
+
+/* --- MONTHLY EARNING COMPARISON --- */
+.comp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.comp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.comp-card.palmpay-card {
+  border-left: 4px solid var(--primary);
+}
+
+.comp-card.mmo-card {
+  border-left: 4px solid #94A3B8;
+}
+
+.comp-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.comp-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.comp-badge.secondary {
+  background: #94A3B8;
+}
+
+.comp-card-header h4 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.comp-table {
+  min-width: 500px;
+  font-size: 12px;
+}
+
+.comp-table th {
+  font-size: 11px;
+  padding: 10px 8px;
+}
+
+.comp-table td {
+  padding: 9px 8px;
+  font-size: 12px;
+}
+
+.comm-total {
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.comp-total {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 2px solid var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comp-total.mmo-total {
+  border-top-color: #94A3B8;
+}
+
+.comp-total-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.comp-total-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.mmo-total .comp-total-value {
+  color: #64748B;
+}
+
+/* --- PROFIT ADVANTAGE --- */
+.profit-advantage {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.profit-vs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.profit-side {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+}
+
+.palmpay-side {
+  background: var(--primary-bg);
+  border: 1px solid rgba(106, 53, 255, 0.2);
+}
+
+.mmo-side {
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.profit-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.profit-amount {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.palmpay-side .profit-amount {
+  color: var(--primary);
+}
+
+.profit-vs-divider {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-muted);
+  padding: 8px;
+}
+
+.profit-result {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.profit-result-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, var(--success), #22C55E);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.profit-bar-container {
+  margin-bottom: 16px;
+}
+
+.profit-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.profit-bar-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.profit-bar-track {
+  flex: 1;
+  height: 32px;
+  background: var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.profit-bar-fill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  border-radius: 8px;
+  transition: width 1.5s ease;
+}
+
+.profit-bar-fill.mmo-fill {
+  background: linear-gradient(90deg, #94A3B8, #CBD5E1);
+  color: var(--text);
+}
+
+.profit-bar-fill.palm-fill {
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+}
+
+.profit-gap-card {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.profit-gap-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profit-gap-value {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.profit-gap-desc {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* --- BREAK-EVEN ANALYSIS --- */
+.breakeven-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.breakeven-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.breakeven-item {
+  text-align: center;
+  padding: 14px;
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+}
+
+.breakeven-item.highlight-be {
+  grid-column: 1 / -1;
+  background: var(--success-bg);
+  border-color: rgba(22, 163, 74, 0.2);
+}
+
+.be-label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.be-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.be-value.primary {
+  color: var(--primary);
+}
+
+.breakeven-item.highlight-be .be-value {
+  font-size: 14px;
+  color: var(--success);
+}
+
+.breakeven-timeline {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.bar-item {
+.be-month {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.bar-label {
+.be-month-label {
   font-size: 12px;
-  color: var(--text-secondary);
   font-weight: 600;
-  min-width: 70px;
+  color: var(--text-secondary);
+  min-width: 65px;
 }
 
-.bar-track {
+.be-progress {
   flex: 1;
   height: 28px;
   background: var(--border-light);
@@ -1225,37 +1657,236 @@ input, textarea { font-family: inherit; }
   overflow: hidden;
 }
 
-.bar-fill {
+.be-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--primary-light));
-  border-radius: 6px;
+  background: linear-gradient(90deg, var(--warning), #F97316);
   display: flex;
   align-items: center;
   padding: 0 10px;
   font-size: 11px;
   font-weight: 700;
   color: white;
-  min-width: fit-content;
-  transition: width 1s ease;
+  border-radius: 6px;
+  transition: width 1.5s ease;
 }
 
-.bar-fill.other {
-  background: linear-gradient(90deg, #94A3B8, #CBD5E1);
-  color: var(--text);
-}
-
-.bar-fill.palm {
+.be-progress-fill.full {
   background: linear-gradient(90deg, var(--success), #22C55E);
 }
 
-.roi-insight {
-  text-align: center;
-  font-size: 14px;
-  color: var(--text-secondary);
-  background: var(--success-bg);
-  padding: 12px 16px;
+.be-month-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 80px;
+  text-align: right;
+}
+
+/* --- STAR TABS --- */
+.star-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+}
+
+.star-tab {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 16px;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
-  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.star-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.star-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(106, 53, 255, 0.3);
+}
+
+.star-panel {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.star-panel.active {
+  display: block;
+}
+
+.star-earnings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.star-earning-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 12px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.se-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.se-type {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+}
+
+.se-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.se-count {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.star-shares {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.share-tag {
+  padding: 5px 14px;
+  background: var(--primary-bg);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+.star-min-earnings {
+  background: linear-gradient(135deg, var(--success), #22C55E);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.3);
+}
+
+.sme-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sme-value {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* --- STAR COMPARISON --- */
+.star-comparison {
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.star-comparison h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.comp-bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.comp-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.comp-bar-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 50px;
+}
+
+.comp-bar-track {
+  flex: 1;
+  height: 30px;
+  background: var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comp-bar-fill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  border-radius: 8px;
+  transition: width 1.5s ease;
+}
+
+.comp-bar-fill.s3 {
+  background: linear-gradient(90deg, #F59E0B, #FBBF24);
+}
+
+.comp-bar-fill.s4 {
+  background: linear-gradient(90deg, #3B82F6, #60A5FA);
+}
+
+.comp-bar-fill.s5 {
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+}
+
+.star-comparison-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.6;
+  font-style: italic;
 }
 
 /* --- KPI GRID (Module 6) --- */

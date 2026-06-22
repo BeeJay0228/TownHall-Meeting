@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="PalmPay Aggregator Town Hall Training Guide - Master PalmPay's New Profit Sharing Policy">
+  <meta name="theme-color" content="#6A35FF">
+  <title>PalmPay Aggregator Town Hall Training Guide</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <section id="splash-screen" class="splash-screen" role="status" aria-label="Loading">
+    <div class="splash-content">
+      <div class="splash-logo">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="80" height="80" rx="16" fill="#6A35FF"/>
+          <path d="M24 40C24 31.1634 31.1634 24 40 24C48.8366 24 56 31.1634 56 40C56 48.8366 48.8366 56 40 56" stroke="white" stroke-width="5" stroke-linecap="round"/>
+          <path d="M40 32V40L46 46" stroke="white" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="40" cy="40" r="2" fill="white"/>
+        </svg>
+      </div>
+      <h1 class="splash-title">Aggregator Town Hall<br>Training Guide</h1>
+      <p class="splash-subtitle">Master PalmPay's New Profit Sharing Policy</p>
+      <div class="splash-loader" aria-hidden="true">
+        <div class="splash-loader-bar"></div>
+      </div>
+      <p class="splash-loading-text">Loading training modules...</p>
+    </div>
+  </section>
+
+  <!-- MAIN APP CONTAINER -->
+  <div id="app" class="app-container" style="display:none;">
+
+    <!-- SIDE NAVIGATION -->
+    <nav id="side-nav" class="side-nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-header">
+        <div class="nav-logo">
+          <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="80" height="80" rx="16" fill="#6A35FF"/>
+            <path d="M24 40C24 31.1634 31.1634 24 40 24C48.8366 24 56 31.1634 56 40C56 48.8366 48.8366 56 40 56" stroke="white" stroke-width="5" stroke-linecap="round"/>
+            <path d="M40 32V40L46 46" stroke="white" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="nav-brand">Training Guide</span>
+        <button id="nav-close" class="nav-close" aria-label="Close navigation">&times;</button>
+      </div>
+      <div class="nav-progress-mini">
+        <div class="nav-progress-label">Overall Progress</div>
+        <div class="nav-progress-bar">
+          <div id="nav-progress-fill" class="nav-progress-fill" style="width:0%"></div>
+        </div>
+        <span id="nav-progress-text" class="nav-progress-text">0%</span>
+      </div>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#dashboard" class="nav-link active" data-module="dashboard"><span class="nav-icon">🏠</span> Home Dashboard</a></li>
+        <li><a href="#module-1" class="nav-link" data-module="module-1"><span class="nav-icon">📖</span> Understanding Aggregator Role</a></li>
+        <li><a href="#module-2" class="nav-link" data-module="module-2"><span class="nav-icon">📋</span> PalmPay New Policy</a></li>
+        <li><a href="#module-3" class="nav-link" data-module="module-3"><span class="nav-icon">🧮</span> Profit Sharing Formula</a></li>
+        <li><a href="#module-4" class="nav-link" data-module="module-4"><span class="nav-icon">💳</span> POS Purchase Model</a></li>
+        <li><a href="#module-5" class="nav-link" data-module="module-5"><span class="nav-icon">📊</span> ROI Analysis</a></li>
+        <li><a href="#module-6" class="nav-link" data-module="module-6"><span class="nav-icon">⭐</span> Quality Agent Criteria</a></li>
+        <li><a href="#module-7" class="nav-link" data-module="module-7"><span class="nav-icon">🏆</span> Agent Success Stories</a></li>
+        <li><a href="#module-8" class="nav-link" data-module="module-8"><span class="nav-icon">🔄</span> Switching Inactive Agents</a></li>
+        <li><a href="#module-9" class="nav-link" data-module="module-9"><span class="nav-icon">👥</span> POS Pool</a></li>
+        <li><a href="#module-10" class="nav-link" data-module="module-10"><span class="nav-icon">📱</span> Agent Dashboard</a></li>
+        <li><a href="#module-11" class="nav-link" data-module="module-11"><span class="nav-icon">💹</span> Agent Transaction Overview</a></li>
+        <li><a href="#module-12" class="nav-link" data-module="module-12"><span class="nav-icon">🔍</span> Managing Inactive Agents</a></li>
+        <li><a href="#module-13" class="nav-link" data-module="module-13"><span class="nav-icon">💰</span> Commission Dashboard</a></li>
+        <li><a href="#module-14" class="nav-link" data-module="module-14"><span class="nav-icon">✅</span> Self Check Feature</a></li>
+        <li><a href="#quiz" class="nav-link" data-module="quiz"><span class="nav-icon">📝</span> Knowledge Assessment</a></li>
+        <li><a href="#faq" class="nav-link" data-module="faq"><span class="nav-icon">❓</span> FAQ</a></li>
+        <li><a href="#completion" class="nav-link" data-module="completion"><span class="nav-icon">🎓</span> Training Summary</a></li>
+      </ul>
+    </nav>
+
+    <!-- OVERLAY -->
+    <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="main-content" role="main">
+
+      <!-- TOP HEADER -->
+      <header class="top-header" role="banner">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+        <div class="header-center">
+          <span class="header-title">Training Guide</span>
+        </div>
+        <div class="header-actions">
+          <button id="search-toggle" class="header-btn" aria-label="Toggle search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <button id="dark-toggle" class="header-btn" aria-label="Toggle dark mode">
+            <svg id="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg id="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- SEARCH BAR -->
+      <div id="search-bar" class="search-bar" style="display:none;" role="search">
+        <div class="search-container">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="search-input" class="search-input" placeholder="Search modules, topics, keywords..." aria-label="Search training content">
+          <button id="search-close" class="search-close" aria-label="Close search">&times;</button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+      </div>
+
+      <!-- ====== DASHBOARD SECTION ====== -->
+      <section id="dashboard" class="section active" data-section="dashboard">
+        <div class="section-inner">
+          <div class="dashboard-welcome">
+            <h1 class="welcome-title">Welcome, Aggregator!</h1>
+            <p class="welcome-sub">Continue your training journey to master PalmPay's New Profit Sharing Policy.</p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon stat-icon-progress">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12A10 10 0 1 1 12 2"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-value" id="completion-percent">0%</span>
+                <span class="stat-label">Completion</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon stat-icon-modules">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+              <div class="stat-info">
+                <span class="stat-value"><span id="completed-modules">0</span>/14</span>
+                <span class="stat-label">Modules Done</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon stat-icon-time">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-value" id="estimated-time">45 min</span>
+                <span class="stat-label">Est. Time</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon stat-icon-quiz">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-value" id="quiz-score">--</span>
+                <span class="stat-label">Quiz Score</span>
+              </div>
+            </div>
+          </div>
+
+          <button id="continue-learning" class="btn-primary btn-continue">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Continue Learning
+          </button>
+
+          <div class="modules-section-header">
+            <h2>Training Modules</h2>
+            <span class="modules-count">14 Modules</span>
+          </div>
+
+          <div class="modules-grid" id="modules-grid">
+            <!-- Module cards injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 1: Understanding Aggregator Role ====== -->
+      <section id="module-1" class="section" data-section="module-1" data-module-title="Understanding the Role of Aggregators">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 1</span>
+            <h2>Understanding the Role of Aggregators</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Aggregators are strategic business partners who drive PalmPay's merchant network growth across Nigeria.</p>
+            <div class="infographic-grid">
+              <div class="info-card">
+                <div class="info-icon">🎯</div>
+                <h3>Recruit Quality Agents</h3>
+                <p>Identify and onboard reliable merchants who will drive transaction volume.</p>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">📱</div>
+                <h3>Deploy POS</h3>
+                <p>Distribute PalmPay POS terminals to approved agents in your network.</p>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">👥</div>
+                <h3>Manage Agents</h3>
+                <p>Provide ongoing support, training, and performance monitoring.</p>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">📈</div>
+                <h3>Drive TPV Growth</h3>
+                <p>Increase Total Payment Volume through active agent supervision.</p>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">🔄</div>
+                <h3>Recover Inactive POS</h3>
+                <p>Identify and retrieve dormant terminals for redeployment.</p>
+              </div>
+              <div class="info-card">
+                <div class="info-icon">💰</div>
+                <h3>Build Recurring Income</h3>
+                <p>Earn ongoing profit share from your agent network's transactions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="dashboard">Previous</button>
+            <button class="btn-primary module-next" data-target="module-2">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 2: PalmPay New Policy ====== -->
+      <section id="module-2" class="section" data-section="module-2" data-module-title="PalmPay New Policy">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 2</span>
+            <h2>PalmPay New Policy</h2>
+          </div>
+          <div class="module-content">
+            <div class="key-message">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6A35FF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p><strong>You are no longer just deploying POS. You are investing in transaction profit.</strong></p>
+            </div>
+            <div class="comparison-container">
+              <div class="comparison-card old-model">
+                <div class="comparison-header">
+                  <span class="comparison-badge">Old Model</span>
+                  <h3>MMO Model</h3>
+                </div>
+                <ul class="comparison-list">
+                  <li><span class="cross">✕</span> Fixed Commission</li>
+                  <li><span class="cross">✕</span> Limited Earnings</li>
+                  <li><span class="cross">✕</span> No Ownership</li>
+                  <li><span class="cross">✕</span> No Growth Potential</li>
+                  <li><span class="cross">✕</span> Capped Income</li>
+                </ul>
+              </div>
+              <div class="comparison-divider">
+                <span class="vs-badge">VS</span>
+              </div>
+              <div class="comparison-card new-model">
+                <div class="comparison-header">
+                  <span class="comparison-badge success">New Model</span>
+                  <h3>PalmPay Model</h3>
+                </div>
+                <ul class="comparison-list">
+                  <li><span class="check">✓</span> Profit Share</li>
+                  <li><span class="check">✓</span> Unlimited Growth</li>
+                  <li><span class="check">✓</span> POS Ownership</li>
+                  <li><span class="check">✓</span> Recurring Income</li>
+                  <li><span class="check">✓</span> Scalable Earnings</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-1">Previous</button>
+            <button class="btn-primary module-next" data-target="module-3">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 3: Profit Sharing Formula ====== -->
+      <section id="module-3" class="section" data-section="module-3" data-module-title="Profit Sharing Formula">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 3</span>
+            <h2>Profit Sharing Formula</h2>
+          </div>
+          <div class="module-content">
+            <div class="formula-cards">
+              <div class="formula-card">
+                <div class="formula-icon">💳</div>
+                <h3>Card Withdrawal</h3>
+                <div class="formula-detail">
+                  <span class="formula-label">AGG Share</span>
+                  <span class="formula-value">45%</span>
+                </div>
+                <div class="formula-detail">
+                  <span class="formula-label">Charge Cap</span>
+                  <span class="formula-value">₦80 - ₦100</span>
+                </div>
+              </div>
+              <div class="formula-card">
+                <div class="formula-icon">💸</div>
+                <h3>Transfer</h3>
+                <div class="formula-detail">
+                  <span class="formula-label">AGG Share</span>
+                  <span class="formula-value">35%</span>
+                </div>
+                <div class="formula-detail">
+                  <span class="formula-label">Charge Cap</span>
+                  <span class="formula-value">₦15 - ₦20</span>
+                </div>
+              </div>
+              <div class="formula-card">
+                <div class="formula-icon">📲</div>
+                <h3>Pay With Transfer</h3>
+                <div class="formula-detail">
+                  <span class="formula-label">AGG Share</span>
+                  <span class="formula-value">70%</span>
+                </div>
+                <div class="formula-detail">
+                  <span class="formula-label">Charge Cap</span>
+                  <span class="formula-value">₦100</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commission Calculator -->
+            <div class="calculator-section" id="commission-calculator">
+              <h3>Commission Calculator</h3>
+              <p class="calculator-desc">Enter estimated daily transaction volumes to calculate your projected earnings.</p>
+              <div class="calculator-form">
+                <div class="calc-field">
+                  <label for="calc-card">Card Transactions (count)</label>
+                  <input type="number" id="calc-card" class="calc-input" min="0" value="10" placeholder="e.g. 10">
+                </div>
+                <div class="calc-field">
+                  <label for="calc-transfer">Transfer Transactions (count)</label>
+                  <input type="number" id="calc-transfer" class="calc-input" min="0" value="20" placeholder="e.g. 20">
+                </div>
+                <div class="calc-field">
+                  <label for="calc-pwt">Pay With Transfer (count)</label>
+                  <input type="number" id="calc-pwt" class="calc-input" min="0" value="5" placeholder="e.g. 5">
+                </div>
+              </div>
+              <div class="calculator-results" id="calc-results">
+                <div class="calc-result-item">
+                  <span class="calc-result-label">Daily Earnings</span>
+                  <span class="calc-result-value" id="calc-daily">₦0</span>
+                </div>
+                <div class="calc-result-item">
+                  <span class="calc-result-label">Weekly Earnings</span>
+                  <span class="calc-result-value" id="calc-weekly">₦0</span>
+                </div>
+                <div class="calc-result-item highlight">
+                  <span class="calc-result-label">Monthly Earnings</span>
+                  <span class="calc-result-value" id="calc-monthly">₦0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-2">Previous</button>
+            <button class="btn-primary module-next" data-target="module-4">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 4: POS Purchase Model ====== -->
+      <section id="module-4" class="section" data-section="module-4" data-module-title="POS Purchase Model">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 4</span>
+            <h2>POS Purchase Model</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Model 1: Purchasing New Policy POS terminals gives you full ownership and maximum profit potential.</p>
+            <div class="pos-cards">
+              <div class="pos-card">
+                <div class="pos-badge">New Policy</div>
+                <div class="pos-image">
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="10" y="4" width="60" height="72" rx="8" stroke="#6A35FF" stroke-width="3"/><line x1="25" y1="16" x2="55" y2="16" stroke="#6A35FF" stroke-width="2"/><line x1="25" y1="24" x2="45" y2="24" stroke="#6A35FF" stroke-width="2"/><line x1="25" y1="32" x2="50" y2="32" stroke="#6A35FF" stroke-width="2"/><line x1="25" y1="40" x2="35" y2="40" stroke="#6A35FF" stroke-width="2"/><rect x="25" y="52" width="30" height="4" rx="2" fill="#6A35FF"/><rect x="25" y="60" width="20" height="4" rx="2" fill="#6A35FF"/></svg>
+                </div>
+                <h3 class="pos-name">Smart POS</h3>
+                <div class="pos-price">₦40,000</div>
+                <ul class="pos-features">
+                  <li>Full Ownership</li>
+                  <li>Faster ROI</li>
+                  <li>Rebinding Capability</li>
+                  <li>Asset Ownership</li>
+                </ul>
+              </div>
+              <div class="pos-card featured">
+                <div class="pos-badge popular">Popular Choice</div>
+                <div class="pos-image">
+                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="10" y="4" width="60" height="72" rx="8" stroke="#6A35FF" stroke-width="3"/><rect x="20" y="12" width="40" height="30" rx="4" fill="#6A35FF" opacity="0.1"/><circle cx="40" cy="27" r="8" stroke="#6A35FF" stroke-width="2"/><line x1="35" y1="27" x2="45" y2="27" stroke="#6A35FF" stroke-width="2"/><line x1="40" y1="22" x2="40" y2="32" stroke="#6A35FF" stroke-width="2"/><rect x="25" y="52" width="30" height="4" rx="2" fill="#6A35FF"/><rect x="25" y="60" width="20" height="4" rx="2" fill="#6A35FF"/></svg>
+                </div>
+                <h3 class="pos-name">MF960 Android POS</h3>
+                <div class="pos-price"><span class="discount">₦40,000</span> ₦32,000</div>
+                <ul class="pos-features">
+                  <li>Full Ownership</li>
+                  <li>Faster ROI</li>
+                  <li>Rebinding Capability</li>
+                  <li>Asset Ownership</li>
+                  <li>Discounted Price</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-3">Previous</button>
+            <button class="btn-primary module-next" data-target="module-5">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 5: ROI Analysis ====== -->
+      <section id="module-5" class="section" data-section="module-5" data-module-title="ROI Analysis">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 5</span>
+            <h2>ROI Analysis</h2>
+          </div>
+          <div class="module-content">
+            <div class="roi-summary">
+              <div class="roi-metric">
+                <span class="roi-value">₦22,746</span>
+                <span class="roi-label">Monthly Earnings</span>
+              </div>
+              <div class="roi-metric">
+                <span class="roi-value">₦32,000</span>
+                <span class="roi-label">MF960 Cost</span>
+              </div>
+              <div class="roi-metric highlight">
+                <span class="roi-value">6.8x</span>
+                <span class="roi-label">Higher Income</span>
+              </div>
+            </div>
+            <div class="chart-container">
+              <h3>Break-even Timeline</h3>
+              <div class="bar-chart" id="roi-chart">
+                <div class="bar-item">
+                  <span class="bar-label">Month 1</span>
+                  <div class="bar-track">
+                    <div class="bar-fill" style="width:71%" data-value="₦22,746">₦22,746</div>
+                  </div>
+                </div>
+                <div class="bar-item">
+                  <span class="bar-label">Month 2</span>
+                  <div class="bar-track">
+                    <div class="bar-fill" style="width:100%" data-value="₦45,492">₦45,492</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-container">
+              <h3>Income Comparison</h3>
+              <div class="bar-chart comparison-chart">
+                <div class="bar-item">
+                  <span class="bar-label">Other MMO</span>
+                  <div class="bar-track">
+                    <div class="bar-fill other" style="width:15%" data-value="₦3,307">₦3,307</div>
+                  </div>
+                </div>
+                <div class="bar-item">
+                  <span class="bar-label">PalmPay</span>
+                  <div class="bar-track">
+                    <div class="bar-fill palm" style="width:100%" data-value="₦22,746">₦22,746</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="roi-insight">With PalmPay's profit sharing model, you earn <strong>6.8x more</strong> than traditional MMO commissions.</p>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-4">Previous</button>
+            <button class="btn-primary module-next" data-target="module-6">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 6: Quality Agent Criteria ====== -->
+      <section id="module-6" class="section" data-section="module-6" data-module-title="Quality Agent Criteria">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 6</span>
+            <h2>Quality Agent Criteria</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Quality Agents meet these minimum daily performance targets:</p>
+            <div class="kpi-grid">
+              <div class="kpi-card">
+                <div class="kpi-icon card-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                </div>
+                <h3>Card</h3>
+                <div class="kpi-value">₦220,000+</div>
+                <div class="kpi-count">10+ Count</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-icon pwt-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                </div>
+                <h3>PWT</h3>
+                <div class="kpi-value">₦140,000+</div>
+                <div class="kpi-count">7+ Count</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-icon transfer-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                </div>
+                <h3>Transfer</h3>
+                <div class="kpi-value">₦360,000+</div>
+                <div class="kpi-count">4+ Count</div>
+              </div>
+            </div>
+            <div class="kpi-highlight">
+              <span class="kpi-highlight-value">₦12,500+</span>
+              <span class="kpi-highlight-label">Expected Monthly Commission per Agent</span>
+            </div>
+            <p class="module-note">Higher performance = higher earnings. Quality agents generate significantly more profit share.</p>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-5">Previous</button>
+            <button class="btn-primary module-next" data-target="module-7">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 7: Agent Success Stories ====== -->
+      <section id="module-7" class="section" data-section="module-7" data-module-title="Agent Success Stories">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 7</span>
+            <h2>Agent Success Stories</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Real agents earning real profits with PalmPay's profit sharing model.</p>
+            <div class="testimonials-grid" id="testimonials">
+              <div class="testimonial-card">
+                <div class="testimonial-avatar">A</div>
+                <div class="testimonial-name">Agent A</div>
+                <div class="testimonial-earning">
+                  <span class="earning-amount" data-target="30000">₦0</span>
+                  <span class="earning-label">Monthly Commission</span>
+                </div>
+                <p>"The new policy has transformed my business. I earn more from a single agent than I used to earn from five!"</p>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-avatar">B</div>
+                <div class="testimonial-name">Agent B</div>
+                <div class="testimonial-earning">
+                  <span class="earning-amount" data-target="40000">₦0</span>
+                  <span class="earning-label">Monthly Commission</span>
+                </div>
+                <p>"Switching to the new policy was the best decision. The profit share is far better than fixed commissions."</p>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-avatar">C</div>
+                <div class="testimonial-name">Agent C</div>
+                <div class="testimonial-earning">
+                  <span class="earning-amount" data-target="50000">₦0</span>
+                  <span class="earning-label">Monthly Commission</span>
+                </div>
+                <p>"I never thought a single POS could generate this much income. PalmPay's model is truly game-changing."</p>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-avatar">D</div>
+                <div class="testimonial-name">Agent D</div>
+                <div class="testimonial-earning">
+                  <span class="earning-amount" data-target="60000">₦0</span>
+                  <span class="earning-label">Monthly Commission</span>
+                </div>
+                <p>"My monthly commission has doubled since switching. I'm now recruiting more agents to join the network."</p>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-6">Previous</button>
+            <button class="btn-primary module-next" data-target="module-8">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 8: Switching Existing Agents ====== -->
+      <section id="module-8" class="section" data-section="module-8" data-module-title="Switching Existing Agents">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 8</span>
+            <h2>Switching Existing Agents</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Model 2: Switch inactive agents to the new profit sharing policy.</p>
+
+            <div class="scenario">
+              <h3 class="scenario-title">Scenario A: Agent is Interested</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-marker success"></div>
+                  <div class="timeline-content">
+                    <h4>1. Agent Shows Interest</h4>
+                    <p>Agent agrees to switch to new policy</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker success"></div>
+                  <div class="timeline-content">
+                    <h4>2. Switch POS</h4>
+                    <p>Switch terminal to profit sharing model</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker success"></div>
+                  <div class="timeline-content">
+                    <h4>3. Reactivate Agent</h4>
+                    <p>Agent resumes transactions</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker success"></div>
+                  <div class="timeline-content">
+                    <h4>4. Agent Transacts</h4>
+                    <p>Daily transactions generate profit share</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker success"></div>
+                  <div class="timeline-content">
+                    <h4>5. Earn Commissions</h4>
+                    <p>You earn ongoing profit share from all transactions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="scenario">
+              <h3 class="scenario-title">Scenario B: Agent is Not Interested</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-marker warning"></div>
+                  <div class="timeline-content">
+                    <h4>1. Agent Declines</h4>
+                    <p>Agent does not want to switch</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker warning"></div>
+                  <div class="timeline-content">
+                    <h4>2. Unbind POS</h4>
+                    <p>Unbind terminal from agent's profile</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker warning"></div>
+                  <div class="timeline-content">
+                    <h4>3. Retrieve POS</h4>
+                    <p>Physically recover the terminal</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker warning"></div>
+                  <div class="timeline-content">
+                    <h4>4. Reassign POS</h4>
+                    <p>Assign to a new active agent</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker success"></div>
+                  <div class="timeline-content">
+                    <h4>5. Generate Profit</h4>
+                    <p>New agent generates profit share for you</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-7">Previous</button>
+            <button class="btn-primary module-next" data-target="module-9">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 9: POS Pool ====== -->
+      <section id="module-9" class="section" data-section="module-9" data-module-title="POS Pool">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 9</span>
+            <h2>POS Pool</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Model 3: Claim Direct Sales Agents from the POS Pool with zero acquisition cost.</p>
+            <div class="benefits-highlight">
+              <div class="benefit-item">
+                <span class="benefit-icon">🆓</span>
+                <span class="benefit-text">Zero Cost Acquisition</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">📋</span>
+                <span class="benefit-text">POS Ownership</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-icon">⚡</span>
+                <span class="benefit-text">Instant Profit-Sharing</span>
+              </div>
+            </div>
+            <div class="workflow-timeline">
+              <h3>Step-by-Step Process</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-marker">1</div>
+                  <div class="timeline-content">
+                    <h4>Open POS Pool</h4>
+                    <p>Navigate to the POS Pool section in your dashboard</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">2</div>
+                  <div class="timeline-content">
+                    <h4>Search Location</h4>
+                    <p>Find agents available in your target area</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">3</div>
+                  <div class="timeline-content">
+                    <h4>Claim Agent</h4>
+                    <p>Select and claim an unassigned agent</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">4</div>
+                  <div class="timeline-content">
+                    <h4>Contact Agent</h4>
+                    <p>Reach out to introduce yourself and provide support</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">5</div>
+                  <div class="timeline-content">
+                    <h4>Agent Accepts</h4>
+                    <p>Agent confirms the partnership agreement</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">6</div>
+                  <div class="timeline-content">
+                    <h4>Agent Activated</h4>
+                    <p>Agent begins transacting under your network</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">7</div>
+                  <div class="timeline-content">
+                    <h4>Earn Profit</h4>
+                    <p>You earn profit share from all agent transactions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-8">Previous</button>
+            <button class="btn-primary module-next" data-target="module-10">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 10: Agent Dashboard ====== -->
+      <section id="module-10" class="section" data-section="module-10" data-module-title="Agent Dashboard">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 10</span>
+            <h2>Agent Dashboard</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Your central hub for monitoring and managing your agent network.</p>
+            <div class="dashboard-mock" id="dashboard-mock">
+              <div class="mock-card" data-info="View today's transaction volume, active agents, and pending tasks at a glance.">
+                <div class="mock-card-icon">📊</div>
+                <h3>Today's Focus</h3>
+                <p>Daily performance snapshot</p>
+              </div>
+              <div class="mock-card" data-info="Identify agents with declining transaction volumes who need attention.">
+                <div class="mock-card-icon">📉</div>
+                <h3>TPV Decline Agents</h3>
+                <p>Monitor decreasing activity</p>
+              </div>
+              <div class="mock-card" data-info="Focus on your top-performing agents driving the most transaction volume.">
+                <div class="mock-card-icon">⭐</div>
+                <h3>High Value Agents</h3>
+                <p>Top performers</p>
+              </div>
+              <div class="mock-card" data-info="Agents who haven't transacted recently. Take action to reactivate them.">
+                <div class="mock-card-icon">💤</div>
+                <h3>Inactive Agents</h3>
+                <p>Requires reactivation</p>
+              </div>
+              <div class="mock-card" data-info="See how your performance ranks against other Aggregators nationally.">
+                <div class="mock-card-icon">🏅</div>
+                <h3>National Ranking</h3>
+                <p>Your position</p>
+              </div>
+            </div>
+            <div id="dashboard-info" class="dashboard-info">
+              <p>Click on any card above to learn more.</p>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-9">Previous</button>
+            <button class="btn-primary module-next" data-target="module-11">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 11: Agent Transaction Overview ====== -->
+      <section id="module-11" class="section" data-section="module-11" data-module-title="Agent Transaction Overview">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 11</span>
+            <h2>Agent Transaction Overview</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Comprehensive visibility into each agent's transaction performance.</p>
+            <div class="accordion" id="txn-accordion">
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">Transaction Value & Count</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>View total transaction values and counts per agent. Track daily, weekly, and monthly volumes to identify trends and performance patterns.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">Current & Previous Month Earnings</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>Compare month-over-month earnings for each agent. Track growth patterns and identify agents who are increasing or decreasing their transaction activity.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">WoW & MoM Trends</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>Week-over-Week and Month-over-Month trend analysis helps you spot emerging patterns early and take proactive action to support your agents.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">Agent Tags</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>Categorize agents with custom tags (e.g., High Performer, Needs Training, New, At Risk) for better organization and targeted management.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-10">Previous</button>
+            <button class="btn-primary module-next" data-target="module-12">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 12: Managing Inactive Agents ====== -->
+      <section id="module-12" class="section" data-section="module-12" data-module-title="Managing Inactive Agents">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 12</span>
+            <h2>Managing Inactive Agents</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Interactive decision tree for handling inactive agents.</p>
+            <div class="decision-tree" id="decision-tree">
+              <div class="decision-node" data-node="start">
+                <p class="decision-question">Is the POS faulty?</p>
+                <div class="decision-options">
+                  <button class="btn-decision" data-answer="yes" data-next="escalate">Yes</button>
+                  <button class="btn-decision" data-answer="no" data-next="coach">No</button>
+                </div>
+              </div>
+              <div class="decision-node" data-node="escalate" style="display:none;">
+                <div class="decision-result escalate">
+                  <span class="result-icon">🔧</span>
+                  <h3>Escalate to Service Center</h3>
+                  <p>Contact PalmPay Service Center (SC) to repair or replace the faulty POS terminal.</p>
+                </div>
+                <button class="btn-outline decision-reset">Start Over</button>
+              </div>
+              <div class="decision-node" data-node="coach" style="display:none;">
+                <p class="decision-question">Coach the agent. Still inactive?</p>
+                <div class="decision-options">
+                  <button class="btn-decision" data-answer="yes" data-next="retrieve">Still Inactive</button>
+                  <button class="btn-decision" data-answer="no" data-next="active">Now Active</button>
+                </div>
+              </div>
+              <div class="decision-node" data-node="retrieve" style="display:none;">
+                <div class="decision-result retrieve">
+                  <span class="result-icon">📦</span>
+                  <h3>Retrieve & Redeploy</h3>
+                  <p>Retrieve the POS terminal and redeploy it to a new, active agent who will generate profit share.</p>
+                </div>
+                <button class="btn-outline decision-reset">Start Over</button>
+              </div>
+              <div class="decision-node" data-node="active" style="display:none;">
+                <div class="decision-result active">
+                  <span class="result-icon">✅</span>
+                  <h3>Agent Reactivated!</h3>
+                  <p>Continue monitoring performance and provide support to maintain transaction activity.</p>
+                </div>
+                <button class="btn-outline decision-reset">Start Over</button>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-11">Previous</button>
+            <button class="btn-primary module-next" data-target="module-13">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 13: Commission Dashboard ====== -->
+      <section id="module-13" class="section" data-section="module-13" data-module-title="Commission Dashboard">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 13</span>
+            <h2>Commission Dashboard</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Track all your commission streams in one place.</p>
+            <div class="commission-cards">
+              <div class="comm-card">
+                <h3>Commission Balance</h3>
+                <div class="comm-value">₦0.00</div>
+                <p>Your current withdrawable balance</p>
+              </div>
+              <div class="comm-card">
+                <h3>D+1 Settling Commission</h3>
+                <div class="comm-value">₦0.00</div>
+                <p>Next day settlement amount</p>
+              </div>
+              <div class="comm-card">
+                <h3>Old Policy Commission</h3>
+                <div class="comm-value">₦0.00</div>
+                <p>Legacy commission earnings</p>
+              </div>
+              <div class="comm-card">
+                <h3>New Policy Commission</h3>
+                <div class="comm-value">₦0.00</div>
+                <p>Profit sharing earnings</p>
+              </div>
+            </div>
+            <div class="ta-requirement">
+              <h3>TA Requirement (60%)</h3>
+              <p>Transaction Analysis (TA) rate of 60% only affects <strong>old policy</strong> commissions. New policy profit sharing is calculated separately and is not subject to TA requirements.</p>
+              <div class="ta-visual">
+                <div class="ta-item">
+                  <span class="ta-label">Old Policy</span>
+                  <div class="ta-bar">
+                    <div class="ta-fill old" style="width:60%">60% TA</div>
+                  </div>
+                </div>
+                <div class="ta-item">
+                  <span class="ta-label">New Policy</span>
+                  <div class="ta-bar">
+                    <div class="ta-fill new" style="width:100%">Not Affected</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-12">Previous</button>
+            <button class="btn-primary module-next" data-target="module-14">Next Module</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MODULE 14: Self Check Feature ====== -->
+      <section id="module-14" class="section" data-section="module-14" data-module-title="Self Check Feature">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Module 14</span>
+            <h2>Self Check Feature</h2>
+          </div>
+          <div class="module-content">
+            <p class="module-intro">Interactive simulation of the POS Self Check feature.</p>
+            <div class="self-check-steps" id="self-check">
+              <div class="self-check-step" data-step="1">
+                <div class="step-number">1</div>
+                <p>Click <strong>"More"</strong> on the POS terminal</p>
+              </div>
+              <div class="self-check-step" data-step="2">
+                <div class="step-number">2</div>
+                <p>Click <strong>"Self Check"</strong> from the menu</p>
+              </div>
+              <div class="self-check-step" data-step="3">
+                <div class="step-number">3</div>
+                <p>Click <strong>"Start Self Check"</strong></p>
+              </div>
+            </div>
+            <button id="run-self-check" class="btn-primary">Run Self Check Simulation</button>
+            <div class="self-check-results" id="self-check-results" style="display:none;">
+              <h3>Diagnostic Results</h3>
+              <div class="check-results">
+                <div class="check-item" data-check="card">
+                  <span class="check-label">Card Detection</span>
+                  <span class="check-status pending">Checking...</span>
+                </div>
+                <div class="check-item" data-check="printing">
+                  <span class="check-label">Printing</span>
+                  <span class="check-status pending">Checking...</span>
+                </div>
+                <div class="check-item" data-check="screen">
+                  <span class="check-label">Screen</span>
+                  <span class="check-status pending">Checking...</span>
+                </div>
+                <div class="check-item" data-check="camera">
+                  <span class="check-label">Camera</span>
+                  <span class="check-status pending">Checking...</span>
+                </div>
+                <div class="check-item" data-check="network">
+                  <span class="check-label">Network</span>
+                  <span class="check-status pending">Checking...</span>
+                </div>
+              </div>
+              <div class="self-check-actions" id="self-check-actions" style="display:none;">
+                <h4>Issues Found?</h4>
+                <div class="action-buttons">
+                  <button class="btn-outline">Call Support</button>
+                  <button class="btn-outline">Visit Repair Center</button>
+                  <button class="btn-outline">Submit Aftersales Form</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-13">Previous</button>
+            <button class="btn-primary module-next" data-target="quiz">Take Assessment</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== KNOWLEDGE ASSESSMENT ====== -->
+      <section id="quiz" class="section" data-section="quiz" data-module-title="Knowledge Assessment">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Assessment</span>
+            <h2>Knowledge Assessment</h2>
+          </div>
+          <div class="quiz-container" id="quiz-container">
+            <div class="quiz-intro" id="quiz-intro">
+              <p>Test your knowledge with 25 questions about PalmPay's New Policy, Profit Sharing, and Aggregator best practices.</p>
+              <ul class="quiz-info-list">
+                <li>25 Questions</li>
+                <li>Multiple Choice & True/False</li>
+                <li>Passing Score: 80%</li>
+                <li>Certificate Eligible</li>
+              </ul>
+              <button id="start-quiz" class="btn-primary">Start Assessment</button>
+            </div>
+            <div class="quiz-active" id="quiz-active" style="display:none;">
+              <div class="quiz-header">
+                <div class="quiz-progress-bar">
+                  <div id="quiz-progress-fill" class="quiz-progress-fill" style="width:0%"></div>
+                </div>
+                <span class="quiz-counter" id="quiz-counter">Question 1 of 25</span>
+              </div>
+              <div class="quiz-question" id="quiz-question"></div>
+              <div class="quiz-options" id="quiz-options"></div>
+              <div class="quiz-feedback" id="quiz-feedback" style="display:none;"></div>
+              <div class="quiz-nav">
+                <button id="quiz-prev" class="btn-outline" disabled>Previous</button>
+                <span id="quiz-progress-text">0/25</span>
+                <button id="quiz-next" class="btn-primary">Next</button>
+              </div>
+            </div>
+            <div class="quiz-results" id="quiz-results" style="display:none;">
+              <div class="results-score">
+                <span class="score-value" id="quiz-score-value">0%</span>
+                <span class="score-label">Your Score</span>
+              </div>
+              <div class="results-details">
+                <p id="quiz-pass-status"></p>
+                <p id="quiz-correct-count"></p>
+              </div>
+              <div class="results-actions">
+                <button id="quiz-retry" class="btn-outline">Retry Assessment</button>
+                <button id="quiz-review" class="btn-primary">Review Answers</button>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="module-14">Previous</button>
+            <button class="btn-primary module-next" data-target="completion">View Summary</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== FAQ SECTION ====== -->
+      <section id="faq" class="section" data-section="faq" data-module-title="FAQ">
+        <div class="section-inner">
+          <div class="module-header">
+            <span class="module-badge">Support</span>
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div class="faq-container" id="faq-container">
+            <div class="accordion">
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">What is PalmPay New Policy?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>PalmPay New Policy is a profit-sharing model that replaces the old commission-based MMO system. Aggregators earn a percentage of transaction profits instead of fixed commissions, allowing for unlimited earnings potential.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">How do I earn profit share?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>You earn profit share from every transaction your agents perform. Card withdrawals earn 45% (cap ₦80-100), transfers earn 35% (cap ₦15-20), and Pay With Transfer earns 70% (cap ₦100). The more your agents transact, the more you earn.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">Can I own the POS?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>Yes! When you purchase a POS under the new policy (Smart POS at ₦40,000 or MF960 at ₦32,000), you have full ownership. This means you can rebind the terminal, retrieve it if inactive, and it remains your asset.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">How do I claim agents?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>You can claim agents through the POS Pool feature in your dashboard. Open the POS Pool, search by location, claim an unassigned agent, and contact them to activate the partnership.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">What is POS Pool?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>POS Pool is a feature that allows Aggregators to claim Direct Sales Agents who are already equipped with PalmPay POS terminals. This provides zero-cost acquisition, instant POS ownership, and immediate profit-sharing eligibility.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">What is TA Rate?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>TA (Transaction Analysis) Rate of 60% is a requirement that only affects old policy commissions. It does not apply to new policy profit sharing. Meeting the 60% TA threshold ensures your old policy commissions are not affected.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">How do I switch agents?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>If an agent is interested in switching, you can move them to the new policy by rebinding their POS, reactivating them, and they start transacting under profit sharing. If not interested, you can unbind, retrieve, and reassign the POS to a new agent.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">What happens if an agent is inactive?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>First check if the POS is faulty. If faulty, escalate to Service Center. If not, coach the agent. If they remain inactive, retrieve the POS and redeploy it to a new active agent to continue generating profit share.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">How does commission settlement work?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>Commissions are settled on a D+1 basis (next day settlement). You can view your commission balance, D+1 settling amounts, old policy commissions, and new policy profit share in the Commission Dashboard.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span class="accordion-title">How does Self Check work?</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                  <p>Self Check is a diagnostic feature on PalmPay POS terminals. Go to More > Self Check > Start Self Check. It tests Card Detection, Printing, Screen, Camera, and Network. Results show Normal or Issue Detected, with options to call support, visit a repair center, or submit an aftersales form.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="module-actions">
+            <button class="btn-outline module-prev" data-target="quiz">Previous</button>
+            <button class="btn-primary module-next" data-target="completion">View Summary</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== COMPLETION PAGE ====== -->
+      <section id="completion" class="section" data-section="completion" data-module-title="Training Summary">
+        <div class="section-inner">
+          <div class="completion-container">
+            <div class="completion-badge">🎓</div>
+            <h2 class="completion-title">Congratulations!</h2>
+            <p class="completion-subtitle">You have completed the PalmPay Aggregator Town Hall Training.</p>
+            <div class="completion-stats">
+              <div class="completion-stat">
+                <span class="completion-stat-value">100%</span>
+                <span class="completion-stat-label">Progress</span>
+              </div>
+              <div class="completion-stat">
+                <span class="completion-stat-value">14/14</span>
+                <span class="completion-stat-label">Modules</span>
+              </div>
+              <div class="completion-stat">
+                <span class="completion-stat-value" id="completion-quiz-score">--</span>
+                <span class="completion-stat-label">Assessment</span>
+              </div>
+            </div>
+            <button id="download-certificate" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Certificate
+            </button>
+            <p class="completion-review">Review any module or retake the assessment anytime.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/certificate.js"></script>
+</body>
+</html>

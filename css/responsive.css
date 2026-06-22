@@ -1,0 +1,209 @@
+/* ============================================
+   PALMPAY AGGREGATOR TOWN HALL TRAINING GUIDE
+   Responsive Stylesheet
+   ============================================ */
+
+/* --- SMALL PHONES (up to 360px) --- */
+@media (max-width: 360px) {
+  .splash-title { font-size: 20px; }
+  .stats-grid { gap: 8px; }
+  .stat-card { padding: 12px; gap: 10px; }
+  .stat-icon { width: 36px; height: 36px; }
+  .stat-value { font-size: 15px; }
+  .welcome-title { font-size: 22px; }
+  .roi-summary { grid-template-columns: 1fr; }
+  .completion-stats { gap: 16px; }
+  .completion-stat-value { font-size: 20px; }
+}
+
+/* --- PHONES (361px - 480px) --- */
+@media (min-width: 361px) {
+  .infographic-grid { grid-template-columns: 1fr 1fr; }
+  .dashboard-mock { grid-template-columns: 1fr 1fr; }
+  .commission-cards { grid-template-columns: 1fr 1fr; }
+}
+
+/* --- PHONES (up to 480px) --- */
+@media (max-width: 480px) {
+  .formula-cards { grid-template-columns: 1fr; }
+  .pos-cards { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .kpi-grid { grid-template-columns: 1fr; }
+  .module-actions { flex-direction: column; }
+  .module-actions .btn-primary,
+  .module-actions .btn-outline { width: 100%; }
+  .results-actions { flex-direction: column; }
+  .results-actions .btn-primary,
+  .results-actions .btn-outline { width: 100%; }
+  .benefits-highlight { grid-template-columns: 1fr; }
+}
+
+/* --- TABLETS (481px - 768px) --- */
+@media (min-width: 481px) {
+  .infographic-grid { grid-template-columns: 1fr 1fr; }
+  .formula-cards { grid-template-columns: 1fr 1fr 1fr; }
+  .pos-cards { grid-template-columns: 1fr 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  .kpi-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .commission-cards { grid-template-columns: 1fr 1fr; }
+  .benefits-highlight { grid-template-columns: 1fr 1fr 1fr; }
+  .dashboard-mock { grid-template-columns: 1fr 1fr 1fr; }
+  .self-check-steps { flex-direction: row; }
+  .self-check-step { flex: 1; flex-direction: column; text-align: center; }
+  .comparison-container { flex-direction: row; align-items: stretch; }
+  .comparison-card { flex: 1; }
+  .comparison-divider { display: flex; align-items: center; }
+}
+
+/* --- TABLETS (up to 768px) --- */
+@media (max-width: 768px) {
+  .side-nav { width: 100%; max-width: 320px; }
+  .roi-summary { grid-template-columns: 1fr 1fr; }
+  .roi-metric:last-child { grid-column: 1 / -1; }
+}
+
+/* --- TABLETS (601px - 1024px) --- */
+@media (min-width: 601px) {
+  .modules-grid { grid-template-columns: 1fr 1fr; }
+  .calculator-form { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* --- DESKTOP (769px+) --- */
+@media (min-width: 769px) {
+  .side-nav {
+    transform: translateX(0);
+    width: var(--nav-width);
+  }
+
+  .main-content {
+    margin-left: var(--nav-width);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-close {
+    display: none;
+  }
+
+  .nav-overlay {
+    display: none !important;
+  }
+
+  .modules-grid { grid-template-columns: 1fr 1fr; }
+  .formula-cards { grid-template-columns: 1fr 1fr 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .dashboard-mock { grid-template-columns: repeat(5, 1fr); }
+  .commission-cards { grid-template-columns: 1fr 1fr; }
+
+  .section-inner {
+    padding: 32px 24px 60px;
+  }
+
+  .welcome-title {
+    font-size: 32px;
+  }
+
+  .roi-summary {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .roi-metric:last-child {
+    grid-column: auto;
+  }
+}
+
+/* --- LARGE DESKTOP (1025px+) --- */
+@media (min-width: 1025px) {
+  .section-inner {
+    max-width: 900px;
+    padding: 40px 32px 80px;
+  }
+
+  .modules-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .infographic-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --- WIDE DESKTOP (1400px+) --- */
+@media (min-width: 1400px) {
+  .section-inner {
+    max-width: 1000px;
+  }
+}
+
+/* --- TOUCH DEVICES --- */
+@media (hover: none) and (pointer: coarse) {
+  .module-card:hover,
+  .stat-card:hover,
+  .info-card:hover,
+  .formula-card:hover,
+  .pos-card:hover,
+  .kpi-card:hover,
+  .mock-card:hover {
+    transform: none;
+  }
+
+  .btn-primary:hover,
+  .btn-outline:hover {
+    transform: none;
+  }
+
+  .mock-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* --- REDUCED MOTION --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* --- DARK MODE OVERRIDES FOR RESPONSIVE --- */
+[data-theme="dark"] .side-nav {
+  border-right-color: var(--border);
+}
+
+[data-theme="dark"] .mock-card {
+  border-color: var(--border);
+}
+
+/* --- ACCESSIBILITY: FOCUS VISIBLE --- */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* --- SAFE AREA SUPPORT --- */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .section-inner {
+    padding-bottom: calc(40px + env(safe-area-inset-bottom));
+  }
+  
+  .side-nav {
+    padding-top: env(safe-area-inset-top);
+  }
+}
